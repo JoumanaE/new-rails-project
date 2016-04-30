@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
+
   get 'welcome/index'
 
   get 'welcome/about'
 
-  get 'welcome/sign_up'
+  resources :users, only: [:show]
 
- devise_for :users
-
-resources :users, only: [:show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -63,5 +62,5 @@ resources :users, only: [:show]
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root 'home#index'
+  root 'welcome#index'
 end

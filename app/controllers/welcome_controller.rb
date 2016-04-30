@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
 
-  
 
   def index
   end
@@ -11,7 +10,4 @@ class WelcomeController < ApplicationController
   end
 
   def about
-  end
-
-  def sign_up
   end
